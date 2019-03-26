@@ -1,0 +1,22 @@
+import pygame
+import pygame.font
+pygame.init()
+pygame.font.init()
+import classes
+import variables
+
+pygame.display.set_caption(variables.CAPTION)
+
+while not variables.done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+
+    variables.screen.fill(variables.WHITE)
+
+    #INSERT CODE HERE
+
+    pygame.display.flip()
+    variables.clock.tick(60)
+
+pygame.quit()

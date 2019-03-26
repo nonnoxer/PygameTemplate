@@ -1,0 +1,5 @@
+import pygame
+import pygame.font
+pygame.init()
+pygame.font.init()
+import variables
