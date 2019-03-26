@@ -5,18 +5,19 @@ pygame.font.init()
 import classes
 import variables
 
-pygame.display.set_caption(variables.CAPTION)
+class Main(object):
+    def __init__(self):
+        while not variables.done:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    variables.done = True
 
-while not variables.done:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            done = True
+            variables.screen.fill(variables.BGCOLOUR)
 
-    variables.screen.fill(variables.WHITE)
+            #INSERT CODE HERE
 
-    #INSERT CODE HERE
+            pygame.display.flip()
+            variables.clock.tick(variables.FRAMERATE)
 
-    pygame.display.flip()
-    variables.clock.tick(60)
-
+main = Main()
 pygame.quit()
